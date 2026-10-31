@@ -1,12 +1,14 @@
-<section class="relative h-screen flex items-center mt-16">
-    <!-- Background Image (Sementara pakai placeholder, nanti ganti dengan export dari Figma) -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1589308454676-47b252ce28a0?q=80&w=2070&auto=format&fit=crop');"></div>
+<section class="relative h-screen flex items-center mt-16 overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="/videos/video-desa-beranda.mp4" type="video/mp4">
+    </video>
     
     <!-- Overlay Gelap (Teal) -->
-    <div class="absolute inset-0 bg-teal-900 bg-opacity-75"></div>
+    <div class="absolute inset-0 bg-teal-900/60 z-10"></div>
     
     <!-- Konten Text & Tombol -->
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div class="max-w-3xl">
             <span class="text-yellow-400 font-semibold tracking-wider text-sm mb-3 block uppercase">Selamat Datang di Portal Resmi</span>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
