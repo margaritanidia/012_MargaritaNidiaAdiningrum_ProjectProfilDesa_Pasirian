@@ -13,10 +13,12 @@
                 <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Beranda</a>
                 <a href="{{ url('/profil') }}" class="{{ request()->is('profil') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Profil</a>
                 <a href="{{ url('/pemerintahan') }}" class="{{ request()->is('pemerintahan') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Pemerintahan</a>
-                <a href="{{ url('/#berita') }}" class="text-gray-500 hover:text-teal-700 font-medium pb-1">Berita</a>
-                <a href="{{ url('/#potensi') }}" class="text-gray-500 hover:text-teal-700 font-medium pb-1">Potensi</a>
-                <a href="{{ url('/#galeri') }}" class="text-gray-500 hover:text-teal-700 font-medium pb-1">Galeri</a>
-                <a href="{{ url('/#kontak') }}" class="text-gray-500 hover:text-teal-700 font-medium pb-1">Kontak</a>
+                <a href="{{ url('/berita') }}" class="{{ request()->is('berita') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Berita</a>
+                <a href="{{ route('potensi') }}" class="{{ request()->is('potensi') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Potensi</a>
+                <a href="{{ route('galeri') }}" class="{{ request()->is('galeri') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Galeri</a>
+                
+                <!-- 👇 Menu Kontak yang sudah diperbarui -->
+                <a href="{{ route('kontak') }}" class="{{ request()->is('kontak') ? 'text-teal-900 font-semibold border-b-2 border-teal-600 pb-1' : 'text-gray-500 hover:text-teal-700 font-medium pb-1' }}">Kontak</a>
             </div>
 
             <!-- Tombol Kanan -->

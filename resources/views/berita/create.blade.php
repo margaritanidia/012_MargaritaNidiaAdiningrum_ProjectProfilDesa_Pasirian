@@ -20,19 +20,20 @@
 
                         <!-- Isi Berita -->
                         <div class="mb-4">
-                            <label for="konten" class="block text-sm font-medium text-gray-700">Isi Berita</label>
-                            <textarea name="konten" id="konten" rows="5" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required></textarea>
+                            <label for="konten" class="block text-sm font-medium text-gray-700 mb-2">Isi Berita</label>
+                            <!-- Atribut required dihapus agar tidak bentrok dengan CKEditor -->
+                            <textarea name="konten" id="konten" rows="5" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
                         </div>
 
                         <!-- Gambar Berita -->
-                        <div class="mb-4">
+                        <div class="mb-4 mt-6">
                             <label for="gambar" class="block text-sm font-medium text-gray-700">Gambar/Foto</label>
                             <input type="file" name="gambar" id="gambar" class="mt-1 block w-full" accept="image/*">
                         </div>
 
                         <!-- Tombol Aksi -->
-                        <div class="flex items-center gap-4 mt-6">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold">
+                        <div class="flex items-center gap-4 mt-8">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold transition">
                                 Simpan Berita
                             </button>
                             <a href="{{ route('berita.index') }}" class="text-gray-600 hover:underline">Batal</a>
@@ -42,4 +43,16 @@
             </div>
         </div>
     </div>
+
+    <!-- ========================================== -->
+    <!-- SCRIPT UNTUK MEMUNCULKAN EDITOR ALA WORD -->
+    <!-- ========================================== -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#konten' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 </x-app-layout>

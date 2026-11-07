@@ -33,5 +33,21 @@
             @yield('content')
             </main>
         </div>
+
+        <!-- ========================================== -->
+        <!-- SCRIPT GLOBAL UNTUK EDITOR TEKS (CKEDITOR) -->
+        <!-- ========================================== -->
+        <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+        <script>
+            // Mencari semua textarea yang memiliki class 'editor-teks'
+            const allEditors = document.querySelectorAll('.editor-teks');
+            allEditors.forEach(editorElement => {
+                ClassicEditor
+                    .create(editorElement)
+                    .catch(error => {
+                        console.error(error);
+                    });
+            });
+        </script>
     </body>
 </html>
